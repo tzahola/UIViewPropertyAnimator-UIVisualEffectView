@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AYC-5D-DSS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="DEG-XQ-gcj">
+            <objects>
+                <viewController id="AYC-5D-DSS" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rSK-oC-jnr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTo-CZ-VTm">
+                                <rect key="frame" x="68" y="309.5" width="238.5" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9x-99-QFF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" id="UXc-dP-Q2F">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5F8-Uw-9kZ">
+                                            <rect key="frame" x="14" y="506" width="347" height="31"/>
+                                            <connections>
+                                                <action selector="sliderValueChander:" destination="AYC-5D-DSS" eventType="valueChanged" id="N3e-ie-4R6"/>
+                                            </connections>
+                                        </slider>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5F8-Uw-9kZ" secondAttribute="bottom" constant="123" id="AYh-tQ-ops"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5F8-Uw-9kZ" secondAttribute="trailing" id="NUK-Xc-Pq5"/>
+                                        <constraint firstItem="5F8-Uw-9kZ" firstAttribute="leading" secondItem="UXc-dP-Q2F" secondAttribute="leadingMargin" id="iid-nO-ZkB"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="c9x-99-QFF" firstAttribute="leading" secondItem="rSK-oC-jnr" secondAttribute="leading" id="9wv-wQ-YHO"/>
+                            <constraint firstItem="c9x-99-QFF" firstAttribute="top" secondItem="rSK-oC-jnr" secondAttribute="top" id="G0M-l0-R6S"/>
+                            <constraint firstItem="KTo-CZ-VTm" firstAttribute="centerY" secondItem="rSK-oC-jnr" secondAttribute="centerY" id="HEx-67-n5c"/>
+                            <constraint firstItem="c9x-99-QFF" firstAttribute="trailing" secondItem="rSK-oC-jnr" secondAttribute="trailing" id="SNy-fc-GpS"/>
+                            <constraint firstItem="KTo-CZ-VTm" firstAttribute="centerX" secondItem="rSK-oC-jnr" secondAttribute="centerX" id="fjg-YH-okj"/>
+                            <constraint firstAttribute="bottom" secondItem="c9x-99-QFF" secondAttribute="bottom" id="vrl-9K-mzb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NTM-aq-HiT"/>
+                    </view>
+                    <connections>
+                        <outlet property="blurView" destination="c9x-99-QFF" id="fRJ-xP-HuH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ea7-7D-t4Y" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
